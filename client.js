@@ -17,5 +17,5 @@ async function makeRequest() {
   } catch (error) {
     console.log(error);
   }
-  console.log('hello');
 }
+console.log('hello');
