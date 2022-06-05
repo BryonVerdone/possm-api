@@ -5,7 +5,9 @@ const btn = document
 async function makeRequest() {
   const memberName = document.getElementById('input').value;
   try {
-    const res = await fetch(`https://possm-api.herokuapp.com/${memberName}`);
+    const res = await fetch(
+      `https://possm-api.herokuapp.com/api/${memberName}`
+    );
 
     const data = await res.json();
 
