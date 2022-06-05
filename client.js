@@ -4,7 +4,6 @@ const btn = document
 
 async function makeRequest() {
   const memberName = document.getElementById('input').value;
-
   try {
     const res = await fetch(`http://localhost:8000/api/${memberName}`);
 
@@ -12,7 +11,7 @@ async function makeRequest() {
 
     console.log(data);
 
-    document.getElementById('display').innerText = data.instrument;
+    document.getElementById('instrument').innerText = data.instrument;
   } catch (error) {
     console.log(error);
   }

@@ -1,18 +1,38 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
-const port = 8000;
+const PORT = 8000;
 
 app.use(cors());
 
 const bandMembers = {
   earl: {
     age: 40,
-    instrument: 'guiarr/vocals',
+    instrument: 'guitar/vocals',
   },
   jeremy: {
     age: 29,
-    instrument: 'guiarr/vocals',
+    instrument: 'guitar/vocals',
+  },
+  dave: {
+    age: 32,
+    instrument: 'Sync/Perc',
+  },
+  ben: {
+    age: 32,
+    instrument: 'Drums',
+  },
+  craig: {
+    age: 40,
+    instrument: 'Guitar',
+  },
+  bryon: {
+    age: 28,
+    instrument: 'Bass',
+  },
+  unknown: {
+    age: 'unknown',
+    instrument: 'unknown',
   },
 };
 
@@ -21,14 +41,16 @@ app.get('/', (req, res) => {
 });
 
 app.get('/api/:memberName', (req, res) => {
-  const membersName = req.params.memberName.toLowerCase();
+  const membersName = req.params.memberName;
+  console.log(membersName);
+
   if (bandMembers[membersName]) {
     res.json(bandMembers[membersName]);
   } else {
-    console.log('not in band');
+    res.json(bandMembers['unknown']);
   }
 });
 
-app.listen(port, () => {
-  console.log(`running on port ${port}`);
+app.listen(process.env.PORT || PORT, () => {
+  console.log(`running on port ${PORT}`);
 });
