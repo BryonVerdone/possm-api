@@ -41,7 +41,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/api/:memberName', (req, res) => {
-  const membersName = req.params.memberName;
+  const membersName = req.params.memberName.toLowerCase();
   console.log(membersName);
 
   if (bandMembers[membersName]) {
