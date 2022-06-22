@@ -29,6 +29,7 @@ const bandMembers = {
   bryon: {
     age: 28,
     instrument: 'Bass',
+    image: './photos/playing bass.jpg',
   },
   unknown: {
     age: 'unknown',
