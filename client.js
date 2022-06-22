@@ -14,6 +14,7 @@ async function makeRequest() {
     console.log(data);
 
     document.getElementById('instrument').innerText = data.instrument;
+    document.getElementById('img').src = data.image;
   } catch (error) {
     console.log(error);
   }
