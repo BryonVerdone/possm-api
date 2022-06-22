@@ -9,12 +9,12 @@ const bandMembers = {
   earl: {
     age: 40,
     instrument: 'guitar/vocals',
-    image: './photos/Earl.jpg',
+    image: './photos/earl.jpg',
   },
   jeremy: {
     age: 29,
     instrument: 'guitar/vocals',
-    image: './photos/Jer.jpeg',
+    image: './photos/jer.jpeg',
   },
   dave: {
     age: 32,
@@ -24,7 +24,7 @@ const bandMembers = {
   ben: {
     age: 32,
     instrument: 'Drums',
-    image: './photos/brn.jpg',
+    image: './photos/ben.jpg',
   },
   craig: {
     age: 40,
@@ -34,7 +34,7 @@ const bandMembers = {
   bryon: {
     age: 28,
     instrument: 'Bass',
-    image: './photos/playing bass.jpg',
+    image: './photos/bryon.jpg',
   },
   unknown: {
     age: 'unknown',
